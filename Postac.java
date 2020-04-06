@@ -60,6 +60,10 @@ public class Postac {
         return getChwilowa();
     }
 
+    void setZywotnosc(Integer value) {
+        zywotnosc.setChwilowa(value);
+    }
+
     public Integer getSila() {
         return getChwilowa();
     }
@@ -90,10 +94,32 @@ public class Postac {
 
 //konstruktor#################################################################
 
-Postac(){}
+    Postac(int[] charakterystyki){
+        walkaWrecz = new Charakterystyka(charakterystyki[0]);
+        umiejetnosciStrzeleckie = new Charakterystyka(charakterystyki[1]);
+        krzepa = new Charakterystyka(charakterystyki[2]);
+        odpornosc = new Charakterystyka(charakterystyki[3]);
+        zrecznosc = new Charakterystyka(charakterystyki[4]);
+        intelekt = new Charakterystyka(charakterystyki[5]);
+        silaWoli = new Charakterystyka(charakterystyki[6]);
+        oglada = new Charakterystyka(charakterystyki[7]);
+        ataki = new Charakterystyka(charakterystyki[8]);
+        zywotnosc = new Charakterystyka(charakterystyki[9]);
+        sila = new Charakterystyka(charakterystyki[10]);
+        wytrzymalosc = new Charakterystyka(charakterystyki[11]);
+        szybkosc = new Charakterystyka(charakterystyki[12]);
+        magia = new Charakterystyka(charakterystyki[13]);
+        punktyObledu = new Charakterystyka(charakterystyki[14]);
+        punktyPrzeznaczenia = new Charakterystyka(charakterystyki[15]);
+        punktySzczescia = new Charakterystyka(charakterystyki[15]);
+    }
+
+    //metody walki#####################################################################
+
+    
 }
 
-
+//klasa pomocnicza Charakterystyka#########################################################
 
 protected class Charakterystyka {
     private final Integer poczatkowa;
