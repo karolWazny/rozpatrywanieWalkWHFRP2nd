@@ -18,6 +18,9 @@ public class Postac {
    private Charakterystyka punktyObledu;
    private Charakterystyka punktyPrzeznaczenia;
    private Charakterystyka punktySzczescia;
+   private Boolean stan=true; //zywy = 1, martwy = 0
+   private Integer pancerz; //brak = 0, lekki = 1, sredni = 3, ciezki = 5
+   private Integer przytomnosc; //bezbronny = 0, ogluszony = 1, przytomny = 2
 
    //getter/setter###########################################
    public Integer getWalkaWrecz() {
@@ -60,7 +63,7 @@ public class Postac {
         return getChwilowa();
     }
 
-    void setZywotnosc(Integer value) {
+    public void setZywotnosc(Integer value) {
         zywotnosc.setChwilowa(value);
     }
 
@@ -84,6 +87,11 @@ public class Postac {
         return getChwilowa();
     }
 
+    public void setPunktyObledu(Integer arg) {
+        punktyObledu.setAktualna(arg);
+        punktyObledu.setChwilowa(arg);
+    }
+
     public Integer getPunktyPrzeznaczenia() {
         return getChwilowa();
     }
@@ -92,6 +100,17 @@ public class Postac {
         return getChwilowa();
     }
 
+    public Boolean getStan() {
+        return stan;
+    }
+
+    public Integer getPancerz() {
+        return pancerz;
+    }
+
+    public Integer getPrzytomnosc() {
+        return przytomnosc;
+    }
 //konstruktor#################################################################
 
     Postac(int[] charakterystyki){
@@ -116,7 +135,25 @@ public class Postac {
 
     //metody walki#####################################################################
 
-    
+    public void ranaWWalce(Integer obrazenia)
+    {
+        if((getZywotnosc()-obrazenia+getWytrzymalosc()+getPancerz())<0)
+        {
+            setZywotnosc(0);
+            //implementacja trafienia krytycznego
+            //jeszcze niegotowa
+            setPunktyObledu(getPunktyObledu()+1);
+        }
+        else 
+        {
+            setZywotnosc(getZywotnosc+getPancerz()+getWytrzymalosc()-obrazenia);
+        }
+    }
+
+    public void rana(Integer arg)
+    {
+
+    }
 }
 
 //klasa pomocnicza Charakterystyka#########################################################
