@@ -6,15 +6,20 @@ public class Walka {
     public void atak(Postac ataker, Postac obronca) {
         switch(obronca.getPrzytomnosc)
         {
-            default: {//czyli obronca w pelni przytomny i moze sie bronic
-                if(ataker.getWalkaWrecz()>=d100())
+            default: //czyli obronca w pelni przytomny i moze sie bronic
+                {
+                int rzutTrafienie = d100();
+                if(ataker.getWalkaWrecz()>=rzutTrafienie)
                     {
                         int dmg = ataker.getSila();
-                        int rzut = d10;
-                        while(rzut ==10)
+                        int rzutDmg = d10();
+                        dmg+=rzutDmg;
+                        while(rzutDmg ==10) //mechanizm furii
                         {
-
+                            rzutDmg = d10();
+                            dmg+=rzutDmg;
                         }
+
                     }
                 } break;
         }
@@ -26,7 +31,7 @@ public class Walka {
         for(int i = 0; (i < ataker.getAtaki()); i++)
         {
             atak(ataker, obronca);
-            if(!obronca.getStan())
+            if(!obronca.getJestZywy())
             {
                 k=ataker.getAtaki()-i-1;
                 break;
@@ -41,5 +46,20 @@ public class Walka {
 
     public void parowanie() {
         
+    }
+
+    public void ranaWWalce(Postac obronca, Postac ataker, Integer obrazenia)
+    {
+        if((obronca.getZywotnosc()-obrazenia+obronca.getWytrzymalosc()+obronca.getPancerz())<0)
+        {
+            setZywotnosc(0);
+            //implementacja trafienia krytycznego
+            //jeszcze niegotowa
+            setPunktyObledu(getPunktyObledu()+1);
+        }
+        else 
+        {
+            setZywotnosc(getZywotnosc+getPancerz()+getWytrzymalosc()-obrazenia);
+        }
     }
 }
