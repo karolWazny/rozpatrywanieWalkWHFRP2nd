@@ -1,22 +1,23 @@
-import Postac;
-import Dice;
+package walka;
+import general.Postac;
+import general.Dice;
 
 public class Walka {
     
     public void atak(Postac ataker, Postac obronca) {
-        switch(obronca.getPrzytomnosc)
+        switch(obronca.getPrzytomnosc())
         {
             default: //czyli obronca w pelni przytomny i moze sie bronic
                 {
-                int rzutTrafienie = d100();
+                int rzutTrafienie = Dice.d100();
                 if(ataker.getWalkaWrecz()>=rzutTrafienie)
                     {
                         int dmg = ataker.getSila();
-                        int rzutDmg = d10();
+                        int rzutDmg = Dice.d10();
                         dmg+=rzutDmg;
                         while(rzutDmg ==10) //mechanizm furii
                         {
-                            rzutDmg = d10();
+                            rzutDmg = Dice.d10();
                             dmg+=rzutDmg;
                         }
 

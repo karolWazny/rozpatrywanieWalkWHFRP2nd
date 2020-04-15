@@ -1,3 +1,4 @@
+package general;
 public class Postac {
     //pola ################################################
 
@@ -143,7 +144,7 @@ public class Postac {
 
 //klasa pomocnicza Charakterystyka#########################################################
 
-protected class Charakterystyka {
+class Charakterystyka {
     private final Integer poczatkowa;
     private Integer aktualna;
     private Integer chwilowa;

@@ -1,0 +1,10 @@
+Cios sprawia, że przeciwnik na chwilę traci orientację. W swojej następnej turze może wykonać tylko jedną akcję (nie może wykonywać akcji podwójnych).
+Po silnym ciosie przeciwnik chwieje się na nogach. Jest całkowicie zamroczony. Przez jedną rundę nie może wykonywać żadnych akcji.
+Cios zdziera skórę z głowy przeciwnika. Krew zalewa mu oczy, częściowo go oślepiając. Do chwili zatamowania krwawienia ranny otrzymuje modyfikator -10 do walki wręcz.
+Cios wgniata hełm przeciwnika. Od tej chwili osłona głowy zmniejsza się o 1. Naprawa hełmu wymaga udanego testu rzemiosła (płatnerstwo).
+Trafiony przeciwnik pada na ziemię, oszołomiony potężnym ciosem. Przez jedną rundę wszystkie testy wykonuje z modyfikatorem -30. Postać musi wykonać akcję "wstawanie", żeby podnieść się z ziemi.
+Trafiony w czoło przeciwnik potyka się i przyklęka. Przez 1k10 rund jest ogłuszony.
+Trafiony w skroń przeciwnik pada na ziemię. Traci przytomność na 1k10 minut. Przy następnych trafieniach stosuje się zasadę Nagłej Śmierci.
+Efekt 8. - głowa
+efekt 9. - głowa
+efekt 10. - głowa

@@ -1,3 +1,4 @@
+package general;
 public class Dice {
     //symulacja rzutu (arg)k(x) dla standardowo spotykanych w RPG kości
 
