@@ -1,4 +1,5 @@
 package general;
+
 public class Postac {
     //pola ################################################
 
@@ -25,43 +26,43 @@ public class Postac {
 
    //getter/setter###########################################
    public Integer getWalkaWrecz() {
-       return getChwilowa();
+       return walkaWrecz.getChwilowa();
    }
 
    public Integer umiejetnosciStrzeleckie() {
-        return getChwilowa();
+        return umiejetnosciStrzeleckie.getChwilowa();
    }
    
    public Integer getKrzepa() {
-        return getChwilowa();
+        return krzepa.getChwilowa();
    }
 
    public Integer getOdpornosc() {
-        return getChwilowa();
+        return odpornosc.getChwilowa();
     }
 
     public Integer getZrecznosc() {
-        return getChwilowa();
+        return zrecznosc.getChwilowa();
     }
 
     public Integer getIntelekt() {
-        return getChwilowa();
+        return intelekt.getChwilowa();
     }
 
     public Integer getSilaWoli() {
-        return getChwilowa();
+        return silaWoli.getChwilowa();
     }
 
     public Integer getOglada() {
-        return getChwilowa();
+        return oglada.getChwilowa();
     }
 
     public Integer getAtaki() {
-        return getChwilowa();
+        return ataki.getChwilowa();
     }
 
     public Integer getZywotnosc() {
-        return getChwilowa();
+        return zywotnosc.getChwilowa();
     }
 
     public void setZywotnosc(Integer value) {
@@ -69,23 +70,23 @@ public class Postac {
     }
 
     public Integer getSila() {
-        return getChwilowa();
+        return sila.getChwilowa();
     }
 
     public Integer getWytrzymalosc() {
-        return getChwilowa();
+        return wytrzymalosc.getChwilowa();
     }
 
     public Integer getSzybkosc() {
-        return getChwilowa();
+        return szybkosc.getChwilowa();
     }
 
     public Integer getMagia() {
-        return getChwilowa();
+        return magia.getChwilowa();
     }
 
     public Integer getPunktyObledu() {
-        return getChwilowa();
+        return punktyObledu.getChwilowa();
     }
 
     public void setPunktyObledu(Integer arg) {
@@ -94,11 +95,11 @@ public class Postac {
     }
 
     public Integer getPunktyPrzeznaczenia() {
-        return getChwilowa();
+        return punktyPrzeznaczenia.getChwilowa();
     }
 
     public Integer getPunktySzczescia() {
-        return getChwilowa();
+        return punktySzczescia.getChwilowa();
     }
 
     public Boolean getJestZywy() {
@@ -144,34 +145,3 @@ public class Postac {
 
 //klasa pomocnicza Charakterystyka#########################################################
 
-class Charakterystyka {
-    private final Integer poczatkowa;
-    private Integer aktualna;
-    private Integer chwilowa;
-
-    Charakterystyka(Integer wartosc) {
-        poczatkowa = wartosc;
-        aktualna = wartosc;
-        chwilowa = wartosc;
-    }
-
-    public Integer getPoczatkowa() {
-        return poczatkowa;
-    }
-
-    public Integer getAktualna() {
-        return aktualna;
-    }
-
-    public void setAktualna(Integer wartosc) {
-        aktualna = wartosc;
-    }
-
-    public Integer getChwilowa() {
-        return chwilowa;
-    }
-
-    public void setChwilowa(Integer wartosc) {
-        chwilowa = wartosc;
-    }
-}

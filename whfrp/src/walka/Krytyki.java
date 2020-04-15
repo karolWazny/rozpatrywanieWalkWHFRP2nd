@@ -1,4 +1,6 @@
 package walka;
+import general.Postac;
+import general.Dice;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -22,7 +24,7 @@ public class Krytyki {
             nazwaPliku = "noga.txt";
         }
         //wyznaczenie efektu trafienia krytycznego, implementacja tabeli 6-3 z podrecznika
-        int efektCiosu = wartoscKrytyczna + (int)(((double)(d10()))/2+0.5) - 1;
+        int efektCiosu = wartoscKrytyczna + (int)(((double)(Dice.d10()))/2+0.5) - 1;
         if(efektCiosu > 10)
         {
             efektCiosu = 10;
