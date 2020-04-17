@@ -39,6 +39,7 @@ public class Krytyki {
             }
             //wydruk tresci efektu z pliku, tymczasowo na konsole
             System.out.println(skaner.nextLine());
+            skaner.close();
         }  
         catch (FileNotFoundException e) 
         {

@@ -11,11 +11,11 @@ public class Charakterystyka {
         chwilowa = wartosc;
     }
 
-    public Integer getPoczatkowa() {
+    public int getPoczatkowa() {
         return poczatkowa;
     }
 
-    public Integer getAktualna() {
+    public int getAktualna() {
         return aktualna;
     }
 
@@ -23,7 +23,7 @@ public class Charakterystyka {
         aktualna = wartosc;
     }
 
-    public Integer getChwilowa() {
+    public int getChwilowa() {
         return chwilowa;
     }
 

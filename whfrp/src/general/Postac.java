@@ -115,7 +115,12 @@ public class Postac {
     }
 //konstruktor#################################################################
 
-    Postac(int[] charakterystyki){
+    public Postac(int[] charakterystyki){
+        bebechyKonstruktora(charakterystyki);
+    }
+
+    //konstruktor domyslny######################################################
+    private void bebechyKonstruktora (int[] charakterystyki){
         walkaWrecz = new Charakterystyka(charakterystyki[0]);
         umiejetnosciStrzeleckie = new Charakterystyka(charakterystyki[1]);
         krzepa = new Charakterystyka(charakterystyki[2]);
@@ -133,6 +138,25 @@ public class Postac {
         punktyObledu = new Charakterystyka(charakterystyki[14]);
         punktyPrzeznaczenia = new Charakterystyka(charakterystyki[15]);
         punktySzczescia = new Charakterystyka(charakterystyki[15]);
+        przytomnosc = 2;
+    }
+
+   public Postac()
+    {
+        int[] charakterystyki = new int[16];
+        for(int i = 0; i < 8; i++)
+        {
+            charakterystyki[i] = 31;
+        }
+        charakterystyki[8] = 1;
+        charakterystyki[9] = 11;
+        charakterystyki[10] = 3;
+        charakterystyki[11] = 3;
+        charakterystyki[12] = 4;
+        charakterystyki[13] = 0;
+        charakterystyki[14] = 0;
+        charakterystyki[15] = 2;
+        bebechyKonstruktora(charakterystyki);
     }
 
     //metody walki#####################################################################
